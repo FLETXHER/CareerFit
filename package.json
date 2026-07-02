@@ -1,0 +1,12 @@
+{
+  "name": "careerfit-export",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Export package scripts for the CareerFit product case.",
+  "scripts": {
+    "export": "node scripts/export-careerfit.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

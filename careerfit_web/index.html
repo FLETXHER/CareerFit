@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>职路校准器 CareerFit｜AI求职匹配与简历真实性审查工具</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#overview" aria-label="返回项目概览">
+          <span class="brand-mark">CF</span>
+          <span>CareerFit</span>
+        </a>
+        <nav class="top-nav" aria-label="页面目录">
+          <a href="#problem">问题</a>
+          <a href="#goals">目标</a>
+          <a href="#users">用户</a>
+          <a href="#requirements">需求</a>
+          <a href="#mvp">MVP</a>
+          <a href="#wireframes">原型</a>
+          <a href="#summary">总结</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="overview">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">个人产品分析与MVP方案</p>
+            <h1>职路校准器 CareerFit：AI求职匹配与简历真实性审查工具</h1>
+            <p class="subtitle">
+              面向跨方向求职学生的岗位匹配、简历真实性审查与投递复盘产品方案。
+            </p>
+            <p class="lead">
+              这个作品用于投递「产品实习生 / AI产品助理实习生 / 产品助理」岗位，重点展示基础产品分析、用户痛点拆解、功能规划、需求优先级、低保真原型和产品文档表达能力。
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#wireframes">查看低保真原型</a>
+              <a class="button secondary" href="#mvp">查看功能设计</a>
+            </div>
+          </div>
+
+          <aside class="overview-card" aria-label="项目概览">
+            <h2>项目概览</h2>
+            <dl class="meta-list">
+              <div>
+                <dt>项目类型</dt>
+                <dd>个人产品分析与MVP方案</dd>
+              </div>
+              <div>
+                <dt>我的角色</dt>
+                <dd>产品分析 / 需求拆解 / 低保真原型</dd>
+              </div>
+              <div>
+                <dt>项目状态</dt>
+                <dd>个人练习项目，未正式发布</dd>
+              </div>
+              <div>
+                <dt>目标岗位</dt>
+                <dd>产品实习生 / AI产品助理 / 产品助理</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="wrap two-col">
+          <div>
+            <p class="section-kicker">01 / 问题背景</p>
+            <h2>AI能生成内容，但不一定能帮学生做求职判断</h2>
+          </div>
+          <div class="content-stack">
+            <p>
+              正在摸索岗位方向的学生在找产品、运营、AI应用、设计等实习时，常见问题不是“完全不会写简历”，而是方向判断、岗位理解、证据组织和投递复盘都比较分散。为了提高匹配度，用户可能会不断改简历版本，却越来越难确认哪一版真实、清晰、适合当前岗位。
+            </p>
+            <p>
+              通用AI工具可以帮助生成简历表述或打招呼话术，但它不一定能回答更靠前的问题：这个岗位是否值得投？简历里哪些内容缺少证据？哪些表达存在过度包装风险？投递后该如何记录和复盘？
+            </p>
+            <div class="note-box">
+              <strong>产品定位：</strong>
+              不是“自动海投工具”，而是帮助跨方向求职学生判断岗位匹配度、审查简历真实性、管理简历版本、发现作品与证据缺口、复盘投递反馈的求职决策辅助工具。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="goals">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">02 / 设计目标与非目标</p>
+            <h2>先明确产品解决什么，也明确不做什么</h2>
+          </div>
+          <div class="goal-grid">
+            <article class="goal-card">
+              <h3>设计目标</h3>
+              <ol class="number-list">
+                <li>帮助用户在投递前判断岗位是否值得投。</li>
+                <li>帮助用户识别简历表述中的真实性风险。</li>
+                <li>帮助用户把岗位要求转成可补的作品 / 证据。</li>
+                <li>帮助用户记录投递版本和反馈，形成复盘。</li>
+              </ol>
+            </article>
+            <article class="goal-card">
+              <h3>非目标</h3>
+              <ol class="number-list muted-list">
+                <li>不做一键海投。</li>
+                <li>不承诺获得offer或面试机会。</li>
+                <li>不替用户虚构经历。</li>
+                <li>不替代招聘平台。</li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="users">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">03 / 目标用户</p>
+            <h2>主要服务正在摸索岗位方向的学生</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>用户类型</th>
+                  <th>典型问题</th>
+                  <th>使用场景</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>非强背景学生 / 缺少强实习背书的求职者</td>
+                  <td>不知道自己的经历适合投产品、运营、AI应用还是设计相关岗位</td>
+                  <td>看到岗位后，需要先判断是否值得投入时间修改材料</td>
+                </tr>
+                <tr>
+                  <td>有多份简历但反馈少的求职者</td>
+                  <td>简历版本很多，但无法判断问题在方向、内容还是证据不足</td>
+                  <td>准备投递前，希望对当前简历和JD做一次结构化匹配</td>
+                </tr>
+                <tr>
+                  <td>担心过度包装的求职者</td>
+                  <td>为了贴合JD改写经历，但不确定表述是否真实可信</td>
+                  <td>修改简历后，需要识别高风险表述并补充可验证证据</td>
+                </tr>
+                <tr>
+                  <td>跨方向求职学生</td>
+                  <td>缺少作品集、项目说明和沟通话术的岗位定制能力</td>
+                  <td>对同一段经历做不同岗位版本的表达和复盘</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pain-points">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">04 / 用户痛点</p>
+            <h2>求职问题分散在多个动作里，用户缺少统一判断框架</h2>
+          </div>
+          <div class="pain-grid">
+            <article class="card">
+              <span class="tag blue">方向</span>
+              <h3>岗位方向判断困难</h3>
+              <p>同一段经历可以投不同岗位，但用户不清楚哪个方向更容易形成可信材料。</p>
+            </article>
+            <article class="card">
+              <span class="tag green">JD</span>
+              <h3>JD看不懂，不知道匹配度</h3>
+              <p>岗位描述里有很多抽象能力词，用户难以拆成具体要求和证据点。</p>
+            </article>
+            <article class="card">
+              <span class="tag amber">风险</span>
+              <h3>简历容易过度包装</h3>
+              <p>为了贴合岗位，可能把参与、辅助、练习项目写成主导或正式发布成果。</p>
+            </article>
+            <article class="card">
+              <span class="tag blue">版本</span>
+              <h3>简历版本混乱</h3>
+              <p>不同岗位对应多份简历，但缺少版本命名、修改原因和投递结果记录。</p>
+            </article>
+            <article class="card">
+              <span class="tag green">证据</span>
+              <h3>缺少作品 / 项目证据提醒</h3>
+              <p>简历写了能力点，但没有对应作品集、过程截图、文档或可复盘材料。</p>
+            </article>
+            <article class="card">
+              <span class="tag amber">复盘</span>
+              <h3>投递后没有复盘</h3>
+              <p>投递结果、沟通反馈和简历版本没有关联，下一次修改仍然靠感觉。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="flow">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">05 / 当前求职流程拆解</p>
+            <h2>关键断点出现在“投不投”和“怎么改”之间</h2>
+          </div>
+          <div class="process" aria-label="当前求职流程">
+            <div class="process-step">看到岗位</div>
+            <div class="process-step">判断是否适合</div>
+            <div class="process-step">修改简历</div>
+            <div class="process-step">写打招呼话术</div>
+            <div class="process-step">投递</div>
+            <div class="process-step">等反馈</div>
+            <div class="process-step">复盘 / 放弃</div>
+          </div>
+          <div class="flow-insight">
+            <div>
+              <strong>观察：</strong>
+              用户经常跳过岗位判断，直接进入“改简历”和“写话术”。
+            </div>
+            <div>
+              <strong>机会：</strong>
+              在投递前增加匹配度、真实性和证据缺口检查，降低无效修改成本。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="competitors">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">06 / 竞品与替代方案简析</p>
+            <h2>机会点不在替代招聘平台，而在补齐投递前后的判断链路</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>替代方案</th>
+                  <th>优势</th>
+                  <th>问题</th>
+                  <th>机会点</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>通用AI聊天工具</td>
+                  <td>生成速度快，能改写简历和话术</td>
+                  <td>缺少版本记录、真实性审查和投递复盘闭环</td>
+                  <td>把AI建议结构化为可检查、可追踪的求职决策过程</td>
+                </tr>
+                <tr>
+                  <td>简历模板工具</td>
+                  <td>排版成熟，适合快速生成简历</td>
+                  <td>更关注呈现形式，较少判断岗位匹配和证据质量</td>
+                  <td>在模板之外补充JD拆解、证据缺口和风险提示</td>
+                </tr>
+                <tr>
+                  <td>招聘平台内置简历助手</td>
+                  <td>与岗位投递链路近，使用入口方便</td>
+                  <td>可能偏向提升投递动作，未必帮助用户先做方向判断</td>
+                  <td>提供投递前的冷静判断和投递后的复盘记录</td>
+                </tr>
+                <tr>
+                  <td>人工求职咨询</td>
+                  <td>反馈更个性化，能结合背景讨论</td>
+                  <td>成本较高，质量不稳定，过程记录不一定沉淀</td>
+                  <td>把常见问题产品化，先解决基础判断和材料整理问题</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="opportunity">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">07 / 机会点总结</p>
+            <h2>把“改写工具”往前后延伸成求职决策工具</h2>
+          </div>
+          <div class="opportunity-grid">
+            <article class="opportunity-card">
+              <span class="tag blue">投递前判断</span>
+              <h3>先判断该不该投</h3>
+              <p>现有工具更擅长改写，不擅长帮助用户判断岗位是否值得投入时间准备。</p>
+            </article>
+            <article class="opportunity-card">
+              <span class="tag amber">真实性边界</span>
+              <h3>把润色变成可审查</h3>
+              <p>现有工具容易帮用户润色表达，但缺少对过度包装和证据不足的风险提醒。</p>
+            </article>
+            <article class="opportunity-card">
+              <span class="tag green">投递后复盘</span>
+              <h3>记录版本、岗位和反馈</h3>
+              <p>现有工具较少把简历版本、岗位要求和投递反馈关联起来，复盘难以沉淀。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="journey">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">08 / 用户旅程图</p>
+            <h2>从发现岗位到复盘调整，每一步都需要更明确的判断依据</h2>
+          </div>
+          <div class="journey-grid">
+            <article class="journey-card">
+              <h3>发现岗位</h3>
+              <p><b>行为：</b>浏览招聘平台、社群或内推信息。</p>
+              <p><b>情绪：</b>有兴趣，但不确定是否适合。</p>
+              <p><b>痛点：</b>岗位名称相似，要求差异不清楚。</p>
+              <p><b>机会：</b>提取岗位方向和核心能力标签。</p>
+            </article>
+            <article class="journey-card">
+              <h3>理解JD</h3>
+              <p><b>行为：</b>阅读职责、要求和加分项。</p>
+              <p><b>情绪：</b>容易被专业词和能力词劝退。</p>
+              <p><b>痛点：</b>不知道哪些要求是必须，哪些可补充。</p>
+              <p><b>机会：</b>把JD拆成能力、经验、作品、工具四类。</p>
+            </article>
+            <article class="journey-card">
+              <h3>判断匹配</h3>
+              <p><b>行为：</b>对照自己的经历和简历。</p>
+              <p><b>情绪：</b>犹豫是否值得投。</p>
+              <p><b>痛点：</b>缺少匹配度和缺口判断。</p>
+              <p><b>机会：</b>生成“建议投 / 谨慎投 / 暂缓投”的理由。</p>
+            </article>
+            <article class="journey-card">
+              <h3>修改简历</h3>
+              <p><b>行为：</b>调整项目描述、关键词和顺序。</p>
+              <p><b>情绪：</b>想贴合JD，又担心写过头。</p>
+              <p><b>痛点：</b>真实性边界不清楚。</p>
+              <p><b>机会：</b>提示风险表述和可替代表达。</p>
+            </article>
+            <article class="journey-card">
+              <h3>投递沟通</h3>
+              <p><b>行为：</b>写打招呼话术和作品集说明。</p>
+              <p><b>情绪：</b>担心话术模板化。</p>
+              <p><b>痛点：</b>无法强绑定岗位和自身证据。</p>
+              <p><b>机会：</b>基于JD亮点生成简短、克制的沟通稿。</p>
+            </article>
+            <article class="journey-card">
+              <h3>等待反馈</h3>
+              <p><b>行为：</b>等待已读、约面或无回复。</p>
+              <p><b>情绪：</b>不确定问题在哪里。</p>
+              <p><b>痛点：</b>没有记录投递版本和岗位差异。</p>
+              <p><b>机会：</b>沉淀投递记录、使用版本和结果状态。</p>
+            </article>
+            <article class="journey-card">
+              <h3>复盘调整</h3>
+              <p><b>行为：</b>根据反馈继续修改材料。</p>
+              <p><b>情绪：</b>容易凭感觉反复改。</p>
+              <p><b>痛点：</b>缺少可追踪的改动依据。</p>
+              <p><b>机会：</b>按岗位类型复盘命中点和缺口。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="mvp">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">09 / MVP功能设计</p>
+            <h2>先解决投递前判断、材料可信和投递后记录三个核心问题</h2>
+          </div>
+          <div class="feature-layout">
+            <article class="feature-card">
+              <h3>JD匹配度分析</h3>
+              <p>拆解岗位要求，展示简历已有证据、弱证据和缺失项，给出是否建议投递的理由。</p>
+            </article>
+            <article class="feature-card">
+              <h3>简历真实性审查</h3>
+              <p>识别“主导、上线、负责、显著提升”等高风险表述，提醒用户补充证据或降级表达。</p>
+            </article>
+            <article class="feature-card">
+              <h3>简历版本管理</h3>
+              <p>记录不同岗位对应的简历版本、修改原因、核心关键词和投递结果。</p>
+            </article>
+            <article class="feature-card">
+              <h3>岗位方向建议</h3>
+              <p>根据经历标签和投递反馈，提示更适合优先尝试的岗位方向。</p>
+            </article>
+            <article class="feature-card">
+              <h3>作品 / 证据缺口提醒</h3>
+              <p>把岗位要求转成可准备的作品、文档、截图、复盘说明或项目材料。</p>
+            </article>
+            <article class="feature-card">
+              <h3>打招呼话术辅助</h3>
+              <p>基于岗位重点和个人证据生成简短沟通稿，避免泛泛而谈和夸张表达。</p>
+            </article>
+            <article class="feature-card">
+              <h3>投递记录与反馈复盘</h3>
+              <p>记录岗位、版本、沟通话术、结果状态和复盘结论，为下一次投递提供依据。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="requirements">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">10 / 核心需求小样</p>
+            <h2>用产品需求文档方式描述关键能力</h2>
+            <p class="section-desc">本模块用简化PRD格式展示核心功能的用户故事、输入输出和验收标准，重点展示基础需求表达能力。</p>
+          </div>
+          <div class="requirement-stack">
+            <article class="requirement-card">
+              <div class="requirement-title">
+                <span class="req-id">A</span>
+                <h3>JD匹配度分析</h3>
+              </div>
+              <p class="req-label">需求名称：JD匹配度分析</p>
+              <div class="req-grid">
+                <div><b>用户故事</b><p>作为正在投递产品实习的学生，我希望系统能把JD拆成能力要求，并告诉我简历里哪些能支撑、哪些证据不足，从而判断是否值得投。</p></div>
+                <div><b>功能说明</b><p>系统将JD拆分为岗位职责、必备能力、加分项和作品要求，并与简历经历逐项对应。</p></div>
+                <div><b>输入信息</b><p>目标JD、当前简历版本、目标岗位方向。</p></div>
+                <div><b>输出结果</b><p>匹配结论、强匹配项、弱证据项、缺失项和下一步建议。</p></div>
+                <div class="req-wide"><b>验收标准</b><p>能输出“建议投 / 谨慎投 / 暂缓投”三类结论，并说明理由；每条理由需关联至少一个JD要求或简历证据点。</p></div>
+              </div>
+            </article>
+
+            <article class="requirement-card">
+              <div class="requirement-title">
+                <span class="req-id">B</span>
+                <h3>简历真实性审查</h3>
+              </div>
+              <p class="req-label">需求名称：简历真实性审查</p>
+              <div class="req-grid">
+                <div><b>用户故事</b><p>作为修改简历的学生，我希望系统能识别“主导、负责、上线、显著提升”等高风险表述，并提醒我补证据或降级表达。</p></div>
+                <div><b>功能说明</b><p>系统扫描简历中的强责任、强结果和强影响表达，判断是否有证据支撑。</p></div>
+                <div><b>输入信息</b><p>简历文本、项目说明、作品链接或补充材料。</p></div>
+                <div><b>输出结果</b><p>风险表达、风险原因、风险等级、建议改法和需补证据。</p></div>
+                <div class="req-wide"><b>验收标准</b><p>能标记风险等级，并给出更稳妥的替代表述；替代表述不得虚构经历、数据、上线状态或个人职责。</p></div>
+              </div>
+            </article>
+
+            <article class="requirement-card">
+              <div class="requirement-title">
+                <span class="req-id">C</span>
+                <h3>作品 / 证据缺口提醒</h3>
+              </div>
+              <p class="req-label">需求名称：作品 / 证据缺口提醒</p>
+              <div class="req-grid">
+                <div><b>用户故事</b><p>作为跨方向投递的学生，我希望系统能根据岗位要求提醒我还缺什么作品、截图、文档或复盘材料。</p></div>
+                <div><b>功能说明</b><p>系统将JD要求映射为可准备的证明材料，并按“优先补充 / 可后续补充”排序。</p></div>
+                <div><b>输入信息</b><p>目标JD、简历项目、已有作品集材料、投递方向。</p></div>
+                <div><b>输出结果</b><p>证据缺口清单、建议材料类型、补充优先级和用途说明。</p></div>
+                <div class="req-wide"><b>验收标准</b><p>能输出至少3类证据建议，例如作品链接、过程截图、项目说明；每类建议需说明对应的JD要求。</p></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="priority">
+        <div class="wrap">
+          <div class="section-head compact-head">
+            <div>
+              <p class="section-kicker">11 / 功能优先级</p>
+              <h2>P0先做能形成判断闭环的能力</h2>
+            </div>
+            <div class="filter-group" aria-label="功能优先级筛选">
+              <button class="filter-btn is-active" data-priority="all">全部</button>
+              <button class="filter-btn" data-priority="P0">P0</button>
+              <button class="filter-btn" data-priority="P1">P1</button>
+              <button class="filter-btn" data-priority="P2">P2</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table id="priorityTable">
+              <thead>
+                <tr>
+                  <th>优先级</th>
+                  <th>功能</th>
+                  <th>原因</th>
+                  <th>验证方式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-priority="P0">
+                  <td><span class="pill p0">P0</span></td>
+                  <td>JD匹配度分析</td>
+                  <td>直接帮助用户判断岗位是否值得投</td>
+                  <td>观察用户是否能在10分钟内形成投递判断</td>
+                </tr>
+                <tr data-priority="P0">
+                  <td><span class="pill p0">P0</span></td>
+                  <td>简历真实性审查</td>
+                  <td>降低过度包装和不可验证表达风险</td>
+                  <td>统计风险项识别数量与用户修改情况</td>
+                </tr>
+                <tr data-priority="P0">
+                  <td><span class="pill p0">P0</span></td>
+                  <td>作品 / 证据缺口提醒</td>
+                  <td>让简历建议落到可补充材料上</td>
+                  <td>观察用户是否补充作品、截图或项目说明</td>
+                </tr>
+                <tr data-priority="P0">
+                  <td><span class="pill p0">P0</span></td>
+                  <td>投递记录</td>
+                  <td>为后续复盘提供基础数据</td>
+                  <td>查看投递记录完整率</td>
+                </tr>
+                <tr data-priority="P1">
+                  <td><span class="pill p1">P1</span></td>
+                  <td>简历版本管理</td>
+                  <td>减少版本混乱，和投递结果建立关联</td>
+                  <td>观察用户是否按岗位维护版本说明</td>
+                </tr>
+                <tr data-priority="P1">
+                  <td><span class="pill p1">P1</span></td>
+                  <td>打招呼话术辅助</td>
+                  <td>提升沟通材料和岗位的绑定程度</td>
+                  <td>观察用户是否采用或二次编辑话术</td>
+                </tr>
+                <tr data-priority="P1">
+                  <td><span class="pill p1">P1</span></td>
+                  <td>岗位方向建议</td>
+                  <td>在有一定记录后，帮助用户收敛方向</td>
+                  <td>观察后续投递岗位类型是否更集中</td>
+                </tr>
+                <tr data-priority="P2">
+                  <td><span class="pill p2">P2</span></td>
+                  <td>长期求职数据趋势</td>
+                  <td>需要较多记录后才有意义</td>
+                  <td>观察多周投递和反馈变化</td>
+                </tr>
+                <tr data-priority="P2">
+                  <td><span class="pill p2">P2</span></td>
+                  <td>同类岗位推荐</td>
+                  <td>依赖岗位库和推荐策略，MVP阶段成本较高</td>
+                  <td>验证推荐岗位的打开和投递意愿</td>
+                </tr>
+                <tr data-priority="P2">
+                  <td><span class="pill p2">P2</span></td>
+                  <td>面试问题预测</td>
+                  <td>属于投递后延伸场景，优先级低于投递判断</td>
+                  <td>验证面试准备时的使用频率</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ia">
+        <div class="wrap two-col">
+          <div>
+            <p class="section-kicker">12 / 信息架构</p>
+            <h2>围绕一次投递任务组织页面层级</h2>
+          </div>
+          <div class="ia-tree" role="list" aria-label="信息架构层级">
+            <div class="tree-root">首页</div>
+            <div class="tree-branch" role="listitem">上传简历与JD</div>
+            <div class="tree-branch" role="listitem">匹配分析</div>
+            <div class="tree-branch" role="listitem">真实性审查</div>
+            <div class="tree-branch" role="listitem">证据缺口</div>
+            <div class="tree-branch" role="listitem">简历版本</div>
+            <div class="tree-branch" role="listitem">投递记录</div>
+            <div class="tree-branch" role="listitem">复盘建议</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="wireframes">
+        <div class="wrap">
+          <div class="section-head compact-head">
+            <div>
+              <p class="section-kicker">13 / 核心页面低保真原型</p>
+              <h2>用低保真模块表达关键产品逻辑</h2>
+              <p class="section-desc">以下为低保真原型，用于表达核心流程和信息结构，非正式发布界面。</p>
+            </div>
+            <div class="tabs" role="tablist" aria-label="低保真原型模块">
+              <button class="tab is-active" role="tab" aria-selected="true" data-panel="upload">上传</button>
+              <button class="tab" role="tab" aria-selected="false" data-panel="match">匹配</button>
+              <button class="tab" role="tab" aria-selected="false" data-panel="truth">真实性</button>
+              <button class="tab" role="tab" aria-selected="false" data-panel="review">复盘</button>
+            </div>
+          </div>
+
+          <div class="wireframe-shell">
+            <article class="wireframe-panel is-active" id="panel-upload">
+              <div class="wireframe-browser">
+                <div class="browser-bar"><span></span><span></span><span></span></div>
+                <div class="wire-grid upload-wire">
+                  <div class="wire-sidebar">
+                    <div class="wire-line short"></div>
+                    <div class="wire-nav active"></div>
+                    <div class="wire-nav"></div>
+                    <div class="wire-nav"></div>
+                  </div>
+                  <div class="wire-main">
+                    <div class="wire-title text-title">新建投递分析任务</div>
+                    <div class="form-grid">
+                      <label>简历版本名称<span>产品实习_通用版_v3</span></label>
+                      <label>目标岗位<span>AI产品助理实习生</span></label>
+                      <label>JD来源<span>招聘平台链接 / 手动粘贴</span></label>
+                    </div>
+                    <div class="upload-zones">
+                      <div class="upload-box">简历文本 / PDF</div>
+                      <div class="upload-box">岗位JD / 链接</div>
+                    </div>
+                    <div class="wire-row">
+                      <div class="wire-chip text-chip">岗位方向</div>
+                      <div class="wire-chip text-chip">产品实习</div>
+                      <div class="wire-chip text-chip">AI应用</div>
+                    </div>
+                    <div class="wire-button">开始分析</div>
+                  </div>
+                </div>
+              </div>
+              <div class="wire-caption">
+                <h3>首页 / 上传简历与JD</h3>
+                <p>让用户围绕一次具体岗位建立任务，先上传简历与JD，再进入匹配、真实性和证据缺口分析。</p>
+              </div>
+            </article>
+
+            <article class="wireframe-panel" id="panel-match">
+              <div class="wireframe-browser">
+                <div class="browser-bar"><span></span><span></span><span></span></div>
+                <div class="wire-grid">
+                  <div class="wire-main wide">
+                    <div class="score-block">
+                      <div class="score-ring">72</div>
+                      <div>
+                        <div class="wire-title small text-title">匹配结论：谨慎投</div>
+                        <p class="wire-note">理由：产品分析与文档表达较匹配，但缺少AI产品实习相关项目证据。</p>
+                        <p class="wire-note muted-note">建议先补充作品集页面和项目复盘，再投递。</p>
+                      </div>
+                    </div>
+                    <div class="match-columns">
+                      <div class="mini-card"><b>强匹配项</b><span>需求拆解 / 竞品分析 / 低保真原型</span></div>
+                      <div class="mini-card"><b>弱证据项</b><span>AI产品理解 / 数据指标意识</span></div>
+                      <div class="mini-card"><b>缺失项</b><span>真实用户反馈 / 上线项目结果</span></div>
+                    </div>
+                    <div class="wire-table text-table">
+                      <div>JD要求</div><div>简历证据</div><div>判断</div>
+                      <div>产品文档</div><div>作品集案例</div><div>可支撑</div>
+                      <div>AI应用经验</div><div>个人练习项目</div><div>证据偏弱</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wire-caption">
+                <h3>岗位匹配分析页</h3>
+                <p>把JD拆解为能力点和证据点，给出匹配判断、缺口和“是否值得投”的解释，而不是只输出分数。</p>
+              </div>
+            </article>
+
+            <article class="wireframe-panel" id="panel-truth">
+              <div class="wireframe-browser">
+                <div class="browser-bar"><span></span><span></span><span></span></div>
+                <div class="truth-layout">
+                  <div class="risk-list">
+                    <div class="risk-item high">风险表达：主导AI求职产品设计</div>
+                    <div class="risk-item medium">风险原因：未说明是否正式发布或团队分工</div>
+                    <div class="risk-item low">风险等级：中高</div>
+                  </div>
+                  <div class="compare-box">
+                    <div class="compare-col"><b>原表述</b><span>主导AI求职匹配工具从0到1设计，辅助投递判断。</span></div>
+                    <div class="compare-col"><b>建议改法</b><span>完成AI求职匹配工具的个人MVP方案，输出痛点拆解、功能优先级与低保真原型。</span></div>
+                  </div>
+                  <div class="evidence-box">需补证据：作品链接 / 需求文档截图 / 原型页面 / 项目复盘说明</div>
+                </div>
+              </div>
+              <div class="wire-caption">
+                <h3>简历真实性审查页</h3>
+                <p>重点不是替用户“包装”，而是提示哪些表达需要证据支撑，哪些可以改成更稳妥的描述。</p>
+              </div>
+            </article>
+
+            <article class="wireframe-panel" id="panel-review">
+              <div class="wireframe-browser">
+                <div class="browser-bar"><span></span><span></span><span></span></div>
+                <div class="review-layout">
+                  <div class="kanban-col">
+                    <strong>已投递</strong>
+                    <div class="kanban-card text-card">岗位名称：AI产品助理<br>投递日期：7月1日<br>使用简历版本：v3</div>
+                    <div class="kanban-card text-card">岗位名称：产品实习生<br>投递日期：6月29日<br>使用简历版本：v2</div>
+                  </div>
+                  <div class="kanban-col">
+                    <strong>有反馈</strong>
+                    <div class="kanban-card text-card">沟通状态：已读未回</div>
+                  </div>
+                  <div class="kanban-col">
+                    <strong>待复盘</strong>
+                    <div class="kanban-card text-card">缺少AI项目证据</div>
+                    <div class="kanban-card text-card">话术未绑定JD</div>
+                  </div>
+                  <div class="retro-panel">
+                    <div class="wire-title small text-title">复盘结论</div>
+                    <p class="wire-note">下次投递前补充作品集入口，并把“产品文档能力”对应到JD。</p>
+                    <p class="wire-note muted-note">使用简历版本：产品实习_通用版_v3</p>
+                    <div class="wire-button">记录复盘</div>
+                  </div>
+                </div>
+              </div>
+              <div class="wire-caption">
+                <h3>投递记录与复盘页</h3>
+                <p>把岗位、简历版本、沟通话术和反馈状态放在一起，帮助用户形成下一次投递调整依据。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="metrics">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-kicker">14 / 可验证指标</p>
+            <h2>不写虚假结果，只定义后续可观察的验证指标</h2>
+            <p class="section-desc">这些指标不是已取得结果，而是后续如果进行用户测试时可观察的验证方向。</p>
+          </div>
+          <div class="metric-grid">
+            <article class="metric-card">
+              <strong>10分钟内判断率</strong>
+              <span>用户是否能在10分钟内判断岗位是否值得投</span>
+            </article>
+            <article class="metric-card">
+              <strong>建议采纳率</strong>
+              <span>简历修改建议被采纳或二次编辑的比例</span>
+            </article>
+            <article class="metric-card">
+              <strong>风险项识别数量</strong>
+              <span>过度包装风险项被识别、降级或补证据的数量</span>
+            </article>
+            <article class="metric-card">
+              <strong>投递记录完整率</strong>
+              <span>岗位、版本、话术、结果和复盘字段的填写完整度</span>
+            </article>
+            <article class="metric-card">
+              <strong>复盘后调整率</strong>
+              <span>用户复盘后下一次投递是否调整岗位、简历或作品材料</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="summary">
+        <div class="wrap two-col">
+          <div>
+            <p class="section-kicker">15 / 项目总结</p>
+            <h2>这个项目展示的是产品思考过程，而不是虚构外部成果</h2>
+          </div>
+          <div class="content-stack">
+            <p>
+              CareerFit的核心价值在于把“看到岗位后该怎么判断、怎么改材料、如何避免过度包装、投递后如何复盘”整理成一个连续的产品流程。对作品集来说，它更适合展示需求拆解和MVP规划能力，而不是强调复杂算法或外部成效。
+            </p>
+            <p>
+              本项目没有试图证明我已经具备完整产品经理能力，而是用于展示我对真实问题的拆解、基础需求表达、MVP优先级判断和低保真原型表达能力。
+            </p>
+            <ul class="check-list">
+              <li>真实问题拆解：从个人求职痛点出发，拆成方向、JD、证据、版本和复盘问题。</li>
+              <li>用户流程分析：明确从发现岗位到复盘调整的关键断点。</li>
+              <li>MVP功能规划：优先解决投递前判断、真实性审查和记录闭环。</li>
+              <li>需求优先级判断：用P0/P1/P2区分短期必要功能和后续扩展能力。</li>
+              <li>低保真原型表达：用简单线框表达页面结构和核心信息流。</li>
+              <li>AI工具辅助产品分析：把AI用于结构化判断和风险提示，而不是替代用户做决定。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section boundary" id="boundary">
+        <div class="wrap">
+          <div class="boundary-card">
+            <p class="section-kicker">16 / 项目边界说明</p>
+            <h2>边界与真实性</h2>
+            <p>
+              本项目为个人产品分析与低保真原型练习，暂未正式发布，未使用真实用户数据，主要用于展示产品思考、需求拆解和功能规划能力。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

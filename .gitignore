@@ -1,0 +1,8 @@
+node_modules/
+tmp_pdf_check/
+.cache/
+*.tmp
+*.bak
+*.log
+Thumbs.db
+.DS_Store
